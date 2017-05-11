@@ -1,0 +1,22 @@
+{
+  "name": "cddbnode",
+  "version": "1.0.0",
+  "description": "Front end for DB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/funbobby9107/cddbnode.git"
+  },
+  "author": "Bob Russin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/funbobby9107/cddbnode/issues"
+  },
+  "homepage": "https://github.com/funbobby9107/cddbnode#readme",
+  "dependencies" : {
+    "express" : ">=4.5.0"
+  }
+}
