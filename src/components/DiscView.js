@@ -3,31 +3,30 @@ import DiscForm from './DiscForm';
 import DiscItem from './DiscItem';
 
 DiscView.prototype.Proptypes = {
-    propTypes: {
-        discs: React.PropTypes.array.isRequired,
-        newDisc: React.PropTypes.object.isRequired,
-        onNewDiscChange: React.PropTypes.func.isRequired,
-        onNewDiscSubmit: React.PropTypes.func.isRequired
-    },
+    discState: React.PropTypes.object.isRequired,
+    update: React.PropTypes.func.isRequired,
+    addDisc: React.PropTypes.func.isRequired,
+    remove: React.PropTypes.func.isRequired
+}
 
-    render: function() {
-        return (
-            React.createElement('div', {className: 'DiscView'},
-                React.createElement('h1', {className: 'DiscView-title'}, "Discs"),
-                React.createElement('ul', {className: 'DiscView-list'},
-                    this.props.discs.map(function(disc) {
-                        return React.createElement(DiscItem, disc); 
-                    })),
-                React.createElement(DiscForm, {
-                 value: this.props.newDisc,
-                 onChange: this.props.onNewDiscChange,
-                 onSubmit: this.props.onNewDiscSubmit
-                })
-            ) 
-        )
-    }
+export default function DiscView(props) {
+    return (
+        <div id="list">
+            {props.discState.discs.map(function (disc, idx) {
+                return (
+                 <DiscItem
+                     key={idx}
+                     disc={disc}
+                     update={props.update}
+                     remove={props.remove} /> );
+            
+            })}
+            <DiscForm addDisc = {props.addDisc} />
+        </div>
 
-    
-});
+    )
+}    
 
-export default DiscView;
+
+
+   

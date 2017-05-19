@@ -1,55 +1,46 @@
 import React from 'react';
 
-var DiscForm = React.createClass( {
-    proptypes: {
-        create: PropTypes.func.isRequired,
-        update: PropTypes.func.isRequired,
-        remove: PropTypes.func.isRequired,
-        discState: PropTypes.object
-    }
+DiscForm.prototype.Proptypes = {
+    addDisc: React.PropTypes.func.isRequired
+    
 }
 
-
-    onArtistInput: function(e) {
-        this.props.onChange(Object.assign({}, this.props.value, {artist: e.target.value}))
-    },
-
-    onTitleInput: function(e) {
-        this.props.onChange(Object.assign({}, this.props.value, {title: e.target.value}))
-    },
-
-    
-    onSubmit: function(e) {
-        e.preventDefault();
-        this.props.onSubmit();
-    },
-
-    render: function() {
-        var errors = this.props.value.errors || {};
-
-        return(
-            React.createElement('form', {className: 'DiscForm'},
-            React.createElement('input', {
-                type: 'text',
-                placeholder: 'Artist',
-                value: this.props.value.artist,
-                onChange: function(e) {
-                    console.log(e.target.value);
-                }
-
-            }),
-            React.createElement('input', {
-                type: 'text',
-                placeholder: 'Title',
-                value: this.props.value.title,
-                onChange: function(e) {
-                    console.log(e.target.value);
-                }
-            }),
-            React.createElement('button', {type: 'submit'}, "Save")
-            )
-        )
+export default function DiscForm(props) {
+    let _artistInput;
+    let _titleInput;
+    function handleArtistInput(input) {
+        _artistInput = input;
     }
-});
+    function handleTitleInput(input) {
+        _titleInput = input;
+     }
 
-export default DiscForm;
+
+    function submit(event) {
+        event.preventDefault();
+        var content = {
+            artist: _artistInput.value,
+            title: _titleInput.value
+        }
+        props.addDisc(content);
+        _artistInput = '';
+        _titleInput = '';
+    }
+
+    return (
+        <form onSubmit={submit}>
+            <div className = "item-new">
+                <input
+                    ref={handleArtistInput}
+                    type="text"
+                    name="artist"
+                    className="input" />
+                    <input
+                       ref={handleTitleInput}
+                       type="text"
+                       name="title"
+                       className="input" />
+            </div>    
+        </form>    
+    )
+}
