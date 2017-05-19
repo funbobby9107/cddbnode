@@ -1,0 +1,7 @@
+
+module.exports = {
+    DISC_CREATE: 'DISC_CREATE',
+    DISC_FIND_ALL: 'DISC_FIND_ALL',
+    DISC_UPDATE: 'DISC_UPDATE',
+    DISC_DELETE: 'DISC_DELETE'
+};

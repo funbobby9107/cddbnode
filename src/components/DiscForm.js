@@ -2,10 +2,13 @@ import React from 'react';
 
 var DiscForm = React.createClass( {
     proptypes: {
-        value: React.PropTypes.object.isRequired,
-        onChange: React.PropTypes.func.isRequired,
-        onSubmit: React.PropTypes.func.isRequired
-    },
+        create: PropTypes.func.isRequired,
+        update: PropTypes.func.isRequired,
+        remove: PropTypes.func.isRequired,
+        discState: PropTypes.object
+    }
+}
+
 
     onArtistInput: function(e) {
         this.props.onChange(Object.assign({}, this.props.value, {artist: e.target.value}))

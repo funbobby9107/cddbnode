@@ -15,7 +15,7 @@ export default class Routes extends Component {
         <div>
           <Route>
             <div>
-              Hello
+              <DiscContainer />
               
             </div> 
            </Route> 

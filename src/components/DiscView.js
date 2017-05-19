@@ -2,7 +2,7 @@ import React from 'react';
 import DiscForm from './DiscForm';
 import DiscItem from './DiscItem';
 
-var DiscView = React.createClass( {
+DiscView.prototype.Proptypes = {
     propTypes: {
         discs: React.PropTypes.array.isRequired,
         newDisc: React.PropTypes.object.isRequired,
@@ -26,6 +26,8 @@ var DiscView = React.createClass( {
             ) 
         )
     }
+
+    
 });
 
 export default DiscView;
