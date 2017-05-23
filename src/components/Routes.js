@@ -15,8 +15,8 @@ export default class Routes extends Component {
         <div>
           <Route>
             <div>
-              <DiscContainer />
               
+              <Route exact path="/" component={DiscContainer} />
             </div> 
            </Route> 
         </div>
@@ -26,4 +26,4 @@ export default class Routes extends Component {
 }
 
 
-//'<Route exact path="/" component={DiscContainer} />'
+//''

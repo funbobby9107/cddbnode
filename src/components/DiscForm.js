@@ -29,7 +29,7 @@ export default function DiscForm(props) {
 
     return (
         <form onSubmit={submit}>
-            <div className = "item-new">
+            <div className="item-new">
                 <input
                     ref={handleArtistInput}
                     type="text"

@@ -1,9 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 
-import React from 'react';
+//import React from 'react';
 import { connect } from 'react-redux';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import DiscView from './DiscView';
 import actions from './DiscActions'
 

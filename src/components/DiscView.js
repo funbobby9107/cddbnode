@@ -21,7 +21,7 @@ export default function DiscView(props) {
                      remove={props.remove} /> );
             
             })}
-            <DiscForm addDisc = {props.addDisc} />
+            <DiscForm addDisc={props.addDisc} />
         </div>
 
     )
