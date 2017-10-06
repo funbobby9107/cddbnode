@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap-theme.css';
 
 //import React from 'react';
 import { connect } from 'react-redux';
-import {withRouter} from 'react-dom';
+//import {withRouter} from 'react-dom';
 import DiscView from './DiscView';
 import actions from './DiscActions'
 

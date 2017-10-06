@@ -15,7 +15,6 @@ export default class Routes extends Component {
         <div>
           <Route>
             <div>
-              
               <Route exact path="/" component={DiscContainer} />
             </div> 
            </Route> 

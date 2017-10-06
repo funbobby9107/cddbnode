@@ -37,6 +37,7 @@ ResourceTOC.txt
 target/
 test-output/
 tmp/
+build/
 xunit.xml
 # OS generated files #
 ######################
