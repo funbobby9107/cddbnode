@@ -16,7 +16,9 @@
     "uuid": "^3.0.1"
   },
   "devDependencies": {
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015-node6": "^0.4.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -7,6 +7,10 @@ import {withRouter} from 'react-dom';
 import DiscView from './DiscView';
 import actions from './DiscActions'
 
+
+
+
+
 const mapStateToProps = (state, ownProps) => {
   return {
     discs: state.discState.discs,
